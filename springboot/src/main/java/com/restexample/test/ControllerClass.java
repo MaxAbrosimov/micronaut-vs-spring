@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/webhook")
+@RequestMapping("/webhook/")
 public class ControllerClass {
 
         @Autowired
         private ServiceClass serviceClass;
 
-        @PostMapping
+        @PostMapping("create")
         public EmployeeResponse createEmployee(@RequestBody Employee employee) throws IOException {
                 return serviceClass.createEmployee(employee);
         }

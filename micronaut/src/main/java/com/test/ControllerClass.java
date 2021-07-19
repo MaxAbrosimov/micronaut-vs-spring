@@ -16,7 +16,7 @@ public class ControllerClass {
         @Inject
         private ServiceClass serviceClass;
 
-        @Post(produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
+        @Post(value = "create", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
         public Single<EmployeeResponse> createEmployee(@Body Employee employee) {
                 return serviceClass.createEmployee(employee);
         }
